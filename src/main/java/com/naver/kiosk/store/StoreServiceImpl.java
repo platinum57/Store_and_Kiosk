@@ -34,7 +34,7 @@ public class StoreServiceImpl implements StoreService {
     public void deleteStore(int id) {
         Store target = getStoreById(id);
         target.delete();
-        //StoreUtils.stores.remove(target);
+        StoreUtils.stores.remove(target);
     }
 
     public Store updateStore(int id, StoreRequest request){
