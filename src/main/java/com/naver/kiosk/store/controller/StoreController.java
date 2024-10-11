@@ -1,5 +1,9 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.controller;
 
+import com.naver.kiosk.store.domain.Store;
+import com.naver.kiosk.store.request.StoreRequest;
+import com.naver.kiosk.store.response.StoreResponse;
+import com.naver.kiosk.store.service.StoreServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

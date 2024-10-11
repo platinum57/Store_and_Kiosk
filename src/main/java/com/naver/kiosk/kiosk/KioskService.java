@@ -10,6 +10,7 @@ public class KioskService {
         List<KioskResponse> kiosks = KioskUtils.kiosks
                 .stream()
                 .map(KioskResponse::from)
+                .filter(e -> e.store() != null)
                 .toList();
         return kiosks;
     }
@@ -17,7 +18,7 @@ public class KioskService {
     public Kiosk getKioskById(int id) {
         return KioskUtils.kiosks
                 .stream()
-                .filter(kiosk -> kiosk.getId() == id)
+                .filter(kiosk -> kiosk != null && kiosk.getId() == id)
                 .findFirst()
                 .orElseThrow(()->new KioskNotFoundException(id));
     }

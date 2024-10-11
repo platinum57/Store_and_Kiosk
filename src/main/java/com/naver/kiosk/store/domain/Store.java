@@ -1,4 +1,4 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.domain;
 
 // 1. 가게
 // name: 매머드 커피
@@ -13,6 +13,9 @@ package com.naver.kiosk.store;
 // opentime: 11
 // closetime: 1
 // id: 2
+
+import com.naver.kiosk.store.request.StoreRequest;
+import com.naver.kiosk.store.utils.StoreUtils;
 
 public class Store {
     private String name;

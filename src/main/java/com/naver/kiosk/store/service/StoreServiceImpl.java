@@ -1,9 +1,14 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.service;
 
 // controller: 유저와 개발자의 소통의 장
 // service: 개발자의 생각창고
 // repository: 개발자와 data의 소통의 장
 
+import com.naver.kiosk.store.domain.Store;
+import com.naver.kiosk.store.exception.StoreNotFoundException;
+import com.naver.kiosk.store.request.StoreRequest;
+import com.naver.kiosk.store.response.StoreResponse;
+import com.naver.kiosk.store.utils.StoreUtils;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

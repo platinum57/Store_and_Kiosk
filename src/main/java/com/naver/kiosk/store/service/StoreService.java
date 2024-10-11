@@ -1,4 +1,8 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.service;
+
+import com.naver.kiosk.store.domain.Store;
+import com.naver.kiosk.store.request.StoreRequest;
+import com.naver.kiosk.store.response.StoreResponse;
 
 import java.util.List;
 

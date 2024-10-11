@@ -1,4 +1,6 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.utils;
+
+import com.naver.kiosk.store.domain.Store;
 
 import java.util.ArrayList;
 import java.util.List;

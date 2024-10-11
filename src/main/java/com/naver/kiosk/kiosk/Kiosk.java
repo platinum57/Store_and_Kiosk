@@ -1,8 +1,8 @@
 package com.naver.kiosk.kiosk;
 
-import com.naver.kiosk.store.Store;
-import com.naver.kiosk.store.StoreNotFoundException;
-import com.naver.kiosk.store.StoreUtils;
+import com.naver.kiosk.store.domain.Store;
+import com.naver.kiosk.store.exception.StoreNotFoundException;
+import com.naver.kiosk.store.utils.StoreUtils;
 
 
 public class Kiosk {
@@ -11,10 +11,6 @@ public class Kiosk {
     private Store store;
     private int storeId;
     private boolean active;
-
-    public boolean kioskError(){
-        return true;
-    }
 
     public Kiosk(int storeId) {
         this.id = KioskUtils.kioskId++;
@@ -45,6 +41,6 @@ public class Kiosk {
                 .stream()
                 .filter(el -> (el.getId() == id && !el.isDeleted()))
                 .findFirst()
-                .orElseThrow(()->new StoreNotFoundException(id));
+                .orElse(null);
     }
 }

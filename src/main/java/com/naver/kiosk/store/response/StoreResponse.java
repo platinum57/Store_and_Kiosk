@@ -1,4 +1,6 @@
-package com.naver.kiosk.store;
+package com.naver.kiosk.store.response;
+
+import com.naver.kiosk.store.domain.Store;
 
 public record StoreResponse
         (String name, String address, int openTime, int closeTime, int id){
