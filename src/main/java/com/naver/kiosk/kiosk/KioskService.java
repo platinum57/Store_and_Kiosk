@@ -19,7 +19,7 @@ public class KioskService {
                 .stream()
                 .filter(kiosk -> kiosk.getId() == id)
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(()->new KioskNotFoundException(id));
     }
 
     public Kiosk addKiosk(KioskRequest request) {
